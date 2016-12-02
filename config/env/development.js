@@ -23,7 +23,7 @@ module.exports = {
       port: 27017,
       user: 'mongodb', //optional
       password: '', //optional
-      database: 'simpleapi' //optional
+      database: 'matches_info' //optional
     }
   },
 

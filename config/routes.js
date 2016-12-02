@@ -57,4 +57,9 @@ module.exports.routes = {
    *                                                                          *
    ***************************************************************************/
 
+  'GET /api/v1/crawler/academia-das-apostas/matches-of-the-day': {
+    controller: "AcademiaDasApostasController",
+    action: "parseMatchesOfTheDay"
+  },
+
 };
