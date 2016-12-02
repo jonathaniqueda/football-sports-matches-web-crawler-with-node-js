@@ -7,7 +7,7 @@
 
 var request = require('request');
 var cheerio = require('cheerio');
-var qs = require('querystring')
+var qs = require('querystring');
 
 module.exports = {
 
@@ -22,7 +22,6 @@ module.exports = {
         method: 'POST',
         json: true,
         form: {
-          redirect_to: 'https%3A%2F%2Fwww.academiadasapostasbrasil.com%2Fstats%2Flivescores',
           user: 'iqueda',
           passwrd: '885364',
         },
@@ -34,11 +33,26 @@ module.exports = {
 
         if (!error && response.statusCode == 200) {
           if (body.status == 'success') {
+            console.log(
+              response.headers['set-cookie'][0],
+              response.headers['set-cookie'][1]
+            );
             //Mapped the livestats page
+            //Cookie:cookies_infonote=1; __umtrst=2; _gat=1; PHPSESSID=648072b52c741ec16851ae0f6f139182; _ga=GA1.2.546015569.1480684380; ADAGLOBALcookie=a%3A4%3A%7Bi%3A0%3Bi%3A61227%3Bi%3A1%3Bs%3A40%3A%22f5906bbb46326736416cf1314076b9da5ecb5126%22%3Bi%3A2%3Bi%3A1481293718%3Bi%3A3%3Bi%3A1%3B%7D
             request({
               url: 'https://www.academiadasapostasbrasil.com/stats/livescores',
+              headers: {
+                'Cookie': [
+                  response.headers['set-cookie'][0],
+                  response.headers['set-cookie'][1]
+                ],
+              },
               method: 'GET',
             }, function(error, response, html) {
+              console.log(
+                response.headers['set-cookie'][0],
+                response.headers['set-cookie'][1]
+              );
               if (!error && response.statusCode == 200) {
                 var $ = cheerio.load(html);
                 $('.live-subscription').each(function(i, element) {
@@ -49,7 +63,6 @@ module.exports = {
                     var route = a.children('.score ').children('a').attr('href');
                     console.log(route);
                   }
-
                 });
               }
             }); //Finish the live stats page map

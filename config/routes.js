@@ -62,4 +62,9 @@ module.exports.routes = {
     action: "parseMatchesOfTheDay"
   },
 
+  'GET /api/v1/crawler/sofascore/matches-of-the-day': {
+    controller: "SofaScoreController",
+    action: "parseMatchesOfTheDay"
+  },
+
 };
