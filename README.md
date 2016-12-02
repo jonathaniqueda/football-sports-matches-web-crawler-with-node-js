@@ -1,12 +1,16 @@
 # Web Crawler - Football Matches v1
 
-Sites mapped:
+## Sites mapped:
 
--
+Neither.
 
-Sites to Map:
+## Sites in progress:
 
-1) https://www.academiadasapostasbrasil.com/
-2) http://www.sofascore.com/pt/
+1. https://www.academiadasapostasbrasil.com/
 
-Made with [SailsJS](http://sailsjs.org) + NodeJS v7 + MongoDB
+## Sites to Map:
+
+1. https://www.academiadasapostasbrasil.com/ - *In Progress*
+2. http://www.sofascore.com/pt/
+
+#### Made with [SailsJS](http://sailsjs.org) + NodeJS v7 + MongoDB
