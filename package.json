@@ -1,11 +1,12 @@
 {
-  "name": "sails-js-boilerplate-skeleton-jwt",
+  "name": "football-sports-matches-web-crawler-with-node-js",
   "private": true,
   "version": "0.0.1",
   "description": "Simple API RESTful based on SailsJS With JWT Auth",
   "keywords": [],
   "dependencies": {
     "bcrypt": "^0.8.7",
+    "cheerio": "^0.22.0",
     "ejs": "2.3.4",
     "grunt": "1.0.1",
     "grunt-contrib-clean": "1.0.0",
@@ -22,6 +23,7 @@
     "include-all": "^1.0.0",
     "jsonwebtoken": "^7.1.9",
     "rc": "1.0.1",
+    "request": "^2.79.0",
     "sails": "~0.12.11",
     "sails-disk": "~0.10.9",
     "sails-hook-mongo-auto-index": "^0.1.3",
