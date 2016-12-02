@@ -1,0 +1,5 @@
+{
+  "users.email.required": "Email is required",
+  "users.email.email": "Provide valid email address",
+  "users.email.unique": "Email address is already taken. Try another email!",
+}
